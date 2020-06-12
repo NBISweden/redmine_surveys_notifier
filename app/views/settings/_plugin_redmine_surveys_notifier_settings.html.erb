@@ -1,0 +1,9 @@
+<fieldset>
+<legend><%= l(:updates_notifier_label_settings) %></legend>
+
+<p>
+  <label><%= l(:updates_notifier_survey_url) %></label><%= text_area_tag 'settings[survey_html]', settings['survey_html'], :size => '50x10' %><br>
+  <label><%= l(:updates_notifier_surveys_sent) %></label><input id="settings_surveys_sent" value="<%= settings['surveys_sent']%>" name="settings[surveys_sent]" text="0" disabled></input>
+</p>
+
+</fieldset>
