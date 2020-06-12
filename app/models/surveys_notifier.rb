@@ -23,13 +23,7 @@ private
   end
 
 
-  def self.surveys_sent()
-    return Setting.plugin_redmine_surveys_notifier['surveys_sent'].to_i
-  end
 
-  def self.add_survey()
-    Setting.plugin_redmine_surveys_notifier['surveys_sent'] = (self.surveys_sent + 1).to_s
-  end
 
   def self.manage_survey(issue)
     ::Rails.logger.info("Sending survey... " )
@@ -46,7 +40,7 @@ private
     end
     if @send.true? then
       SurveyMailer.survey_email(@pi_name, @pi_email, self.survey_html).deliver
-      self.add_survey
+      
 
     end
   end

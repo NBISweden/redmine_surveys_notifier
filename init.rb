@@ -14,16 +14,18 @@ Redmine::Plugin.register :redmine_surveys_notifier do
   url 'https://github.com/airenzp/redmine_surveys_notifier'
   author_url 'https://nbis.se/about/staff/airen-zaldivar/'
 
-  survey_html = " <h1>To whom it may concern</h1><br>
-    <p>
-      Thank you for using NBIS support recently. To help us improve we kindly ask that you fill out a short,
-      ~10 minute, anonymous survey.<br>
-      Survey link: <a>https://nbis.typeform.com/to/dBChMV</a><br>
-    </p>
+  survey_html = " <p>
+     Thank you for using NBIS support recently. To help us improve we kindly ask that you fill out a short,
+     ~10 minute, anonymous survey.
+     Survey link: <a><%= @survey_url %></a><br><br>
+    If someone else was the main contact with NBIS for your project, please feel free to get their input on any question where applicable.
+   </p>
 
-    <p>Thanks in advance and have a nice day!</p>
+   <p>Thanks in advance and have a nice day!</p>
   "
-  settings :default => {'survey_html' => survey_html, 'surveys_sent' => "0" },
-            :partial => 'settings/plugin_redmine_surveys_notifier_settings'
+  default_settings = {'survey_html' => survey_html}
+
+
+  settings :default => default_settings, :partial => 'settings/plugin_redmine_surveys_notifier_settings'
 
 end

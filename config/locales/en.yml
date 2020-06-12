@@ -1,5 +1,5 @@
 # English strings go here for Rails i18n
 en:
   updates_notifier_label_settings: Survey settings
-  updates_notifier_survey_url: Survey url
+  updates_notifier_survey_url: Survey template
   updates_notifier_surveys_sent: Number of surveys sent
