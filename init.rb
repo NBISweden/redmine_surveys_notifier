@@ -11,8 +11,8 @@ Redmine::Plugin.register :redmine_surveys_notifier do
   author 'Airen Zaldivar'
   description 'This plugin allows to send a survey when a support issue is closed.'
   version '0.0.1'
-  url 'http://example.com/path/to/plugin'
-  author_url 'http://example.com/about'
+  url 'https://github.com/airenzp/redmine_surveys_notifier'
+  author_url 'https://nbis.se/about/staff/airen-zaldivar/'
 
   survey_html = " <h1>To whom it may concern</h1><br>
     <p>
