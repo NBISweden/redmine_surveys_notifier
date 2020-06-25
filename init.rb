@@ -15,9 +15,9 @@ Redmine::Plugin.register :redmine_surveys_notifier do
   author_url 'https://nbis.se/about/staff/airen-zaldivar/'
 
   survey_html = " <p>
-     Thank you for using NBIS support recently. To help us improve we kindly ask that you fill out a short,
-     ~10 minute, anonymous survey.
-     Survey link: <a><%= @survey_url %></a><br><br>
+     Thank you for using NBIS support recently. To help us improve we kindly ask that you fill out this short,
+     ~10 minute, anonymous <a href='https://nbis.typeform.com/to/dBChMV'>survey</a>.
+     <br><br>
     If someone else was the main contact with NBIS for your project, please feel free to get their input on any question where applicable.
    </p>
 
