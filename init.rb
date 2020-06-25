@@ -16,7 +16,9 @@ Redmine::Plugin.register :redmine_surveys_notifier do
 
   survey_html = " <p>
      Thank you for using NBIS support recently. To help us improve we kindly ask that you fill out this short,
-     ~10 minute, anonymous <a href='https://nbis.typeform.com/to/dBChMV'>survey</a>.
+     ~10 minute, anonymous survey:<br><br>
+     <a href='https://nbis.typeform.com/to/dBChMV'><button style='background-color:#4CAF50; border:none; color:white;padding: 12px 32px;text-decoration: none;font-size: 16px;'>
+     Take me to the survey!</button></a>
      <br><br>
     If someone else was the main contact with NBIS for your project, please feel free to get their input on any question where applicable.
    </p>
