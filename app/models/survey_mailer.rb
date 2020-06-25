@@ -7,6 +7,6 @@ class SurveyMailer < Mailer
     attachments.inline['nbis.png'] = File.read(nbis_img)
     ::Rails.logger.info(survey_html)
     mail :to => pi_email, :subject => 'NBIS Survey'
-
   end
+
 end
