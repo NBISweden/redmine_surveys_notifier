@@ -1,4 +1,3 @@
-
 require 'redmine'
 
 ::Rails.logger.info 'Starting Surveys Notifier plugin...'
@@ -27,7 +26,5 @@ Redmine::Plugin.register :redmine_surveys_notifier do
   "
   default_settings = {'survey_html' => survey_html}
 
-
   settings :default => default_settings, :partial => 'settings/plugin_redmine_surveys_notifier_settings'
-
 end
