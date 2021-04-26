@@ -7,8 +7,6 @@ class SurveysNotifier < ActiveRecord::Base
     issue = Issue.find(issueId)
 
     journal.details.each do |j|
-      ::Rails.logger.info("key " + j.prop_key)
-      ::Rails.logger.info("value " + j.value)
       if j.prop_key == "status_id" and issue.status.is_closed then
         self.manage_survey(issue)
       end
