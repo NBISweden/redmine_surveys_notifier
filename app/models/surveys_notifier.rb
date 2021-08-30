@@ -39,7 +39,12 @@ private
     end
 
     if send then
-      SurveyMailer.survey_email(pi_name, pi_email, self.survey_html).deliver
+      begin
+        SurveyMailer.survey_email(pi_name, pi_email, self.survey_html).deliver
+      rescue => exception
+        puts exception.backtrace
+        raise # always reraise
+      end
     end
   end
 
