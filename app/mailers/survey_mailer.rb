@@ -1,5 +1,7 @@
 class SurveyMailer < ActionMailer::Base
 
+  default from: 'redmine@nbis.se'
+
   def survey_email(pi_name, pi_email, survey_html)
     @pi_name=pi_name
     @survey_html=survey_html
