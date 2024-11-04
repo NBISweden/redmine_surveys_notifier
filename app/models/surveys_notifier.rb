@@ -28,7 +28,8 @@ private
     pi_email = ""
 
     issue.custom_field_values.each do |field|
-      ::Rails.logger.info("custom field " + field.custom_field.name + " " + field.value)
+      field_value = field.value.is_a?(Array) ? field.value.join(', ') : field.value.to_s
+      ::Rails.logger.info("custom field #{field.custom_field.name}: #{field_value}")
       if field.custom_field.name == 'Principal Investigator' then
         pi_name = field.value
       elsif field.custom_field.name == 'PI e-mail' then
